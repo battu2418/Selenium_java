@@ -48,28 +48,30 @@ public class BaseClass {
 	@Test
 	public static void Agoogle_Search_Test() throws InterruptedException {
 
-		ExtentTest test1 = extent.createTest("Testing reports", "Seacrhing functionality");		
+		ExtentTest test1 = extent.createTest("Testing reports4", "Seacrhing functionality");		
 		GoogleSearchPage2 GP = new GoogleSearchPage2(driver);
 		GP.setTextInSearchBox("Automation Testing");
 		Thread.sleep(5000);
 		GP.clickGoogleSearchButton();	
 		Thread.sleep(5000);
 		driver.close();
+		extent.flush();
 	}
 	
 	
 	@Test
 	public static void Bgoogle_Search_Test2() throws InterruptedException {
-		ExtentTest test2 = extent.createTest("Testing reports2", "Seacrhing functionality");		
+		ExtentTest test2 = extent.createTest("Testing reports3", "Seacrhing functionality");		
 		GoogleSearchPage2 GP = new GoogleSearchPage2(driver);
 		GP.setTextInSearchBox("Automation Testing");
 		Thread.sleep(5000);
 		GP.clickGoogleSearchButton();
 		Thread.sleep(5000);
 		driver.close();
+		extent.flush();
 	}
 
-	@AfterMethod
+	@AfterTest
 	public void tearDownTest() throws InterruptedException{
 		Thread.sleep(5000);
 		driver.close();
